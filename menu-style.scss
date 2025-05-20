@@ -1,0 +1,67 @@
+$first-color: #9356DC;
+$second_color: #FF79DA;
+$third_color: #99E2D0;
+$gray: hsla(0, 0%, 92%, 1);
+$light-gray: hsla(0, 0%, 97%, 1);
+$gradient: linear-gradient( to top, $first-color -11.44%, $second_color 123.93%);
+
+@mixin text-center{
+    text-align: center;
+}
+
+@mixin button{
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 9999px;
+    color: white;
+    font-size: 1rem;
+    background: $gradient;
+}
+
+html{
+    font-family: "Roboto";
+    font-size: 19px;
+    font-weight: 300;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+footer{
+    background-color: darken($gray, $amount: 60%);
+    padding: 1rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+
+    nav{
+
+        ul{
+            list-style-type: none;
+            padding: 0;
+
+            li{
+                display: flex;
+                align-items: center;
+                padding: 0.2rem 0;
+
+                i{
+                    width: 30px;
+                    font-size: 0.7rem;
+                }
+            }
+
+            a{
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+
+    img{
+        filter: brightness(100);
+        width: 120px;
+        margin: 0.5rem 0;
+    }
+}
