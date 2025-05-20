@@ -1,0 +1,24 @@
+html{
+    font-family: sans-serif;
+}
+
+@mixin text-center{
+    text-align: center;
+}
+
+header {
+    @include text-center;
+    padding: 1rem;
+    
+    img {
+        width: 180px;
+    }
+}
+
+.adress_section{
+    @include text-center;
+}
+
+.intro_section{
+    @include text-center;
+}
