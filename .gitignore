@@ -10,3 +10,4 @@ node_modules/
 # Autres fichiers temporaires
 *.log
 
+*.map
