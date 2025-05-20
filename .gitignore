@@ -1,0 +1,11 @@
+# Ignorer les fichiers CSS générés par Sass
+*.css
+
+# Si tu utilises node_modules (npm)
+node_modules/
+
+# Fichiers temporaires VS Code
+.vscode/
+
+# Autres fichiers temporaires
+*.log
