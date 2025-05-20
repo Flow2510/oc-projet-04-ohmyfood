@@ -1,24 +1,85 @@
-html{
-    font-family: sans-serif;
-}
+$first-color: #9356DC;
+$second_color: #FF79DA;
+$third_color: #99E2D0;
+$gray: hsla(0, 0%, 92%, 1);
+$light-gray: hsla(0, 0%, 97%, 1);
+$gradient: linear-gradient( to top, #9356DC -11.44%, #FF79DA 123.93%);
 
 @mixin text-center{
     text-align: center;
 }
 
+@mixin button{
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 9999px;
+    color: white;
+    font-size: 1rem;
+    background: $gradient;
+}
+
+html{
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: 300;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+section{
+    padding: 2rem 1rem;
+}
+
 header {
     @include text-center;
-    padding: 1rem;
     
     img {
-        width: 180px;
+        width: 190px;
+        margin: 1rem 0 0.5rem;
+    }
+
+    .header_search{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $gray;
+        padding: 1rem;
+        gap: 1rem;
+        
+
+        input{
+            border: none;
+            background-color: transparent;
+            font-size: 1rem;
+            font-weight: 600;
+            width: 200px;
+        }
     }
 }
 
-.adress_section{
-    @include text-center;
-}
+input::placeholder{
+        color: black;
+
+    }
 
 .intro_section{
     @include text-center;
+    background: $light-gray;
+
+    h1{
+        padding: 0 2.5rem;
+    }
+
+    p{
+        margin: 1rem 0;
+        padding: 0 1rem;
+    }
+
+    button{
+        @include button;
+        margin: 1rem 0;
+        }
 }
