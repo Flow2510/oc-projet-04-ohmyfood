@@ -18,6 +18,11 @@ $gradient: linear-gradient( to top, #9356DC -11.44%, #FF79DA 123.93%);
     background: $gradient;
 }
 
+@mixin flex-align{
+    display: flex;
+    align-items: center;
+}
+
 html{
     font-family: "Roboto";
     font-size: 19px;
@@ -56,13 +61,11 @@ header {
     }
 
     .header_search{
-        display: flex;
+        @include flex-align;
         justify-content: center;
-        align-items: center;
         background-color: $gray;
         padding: 1rem;
         gap: 1rem;
-        
 
         input{
             border: none;
@@ -84,8 +87,7 @@ header {
 
     a{
         font-size: 1.2rem;
-        display: flex;
-        align-items: center;
+        @include flex-align;
         justify-content: center;
         text-decoration: none;
     }
@@ -116,8 +118,7 @@ header {
         padding: 0;
 
         li{
-            display: flex;
-            align-items: center;
+            @include flex-align;
             list-style-type: none;
             margin: 1rem 0;
             
@@ -139,8 +140,7 @@ header {
                 height: 25px;
                 width: 25px;
                 border-radius: 999px;
-                display: flex;
-                align-items: center;
+                @include flex-align;
                 justify-content: center;
                 font-size: 0.7rem;
                 transform: translateX(12.5px);
@@ -209,8 +209,7 @@ footer{
             padding: 0;
 
             li{
-                display: flex;
-                align-items: center;
+                @include flex-align;
                 padding: 0.25rem 0;
 
                 i{

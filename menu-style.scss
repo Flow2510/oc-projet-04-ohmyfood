@@ -18,6 +18,11 @@ $gradient: linear-gradient( to top, $first-color -11.44%, $second_color 123.93%)
     background: $gradient;
 }
 
+@mixin flex-align{
+    display: flex;
+    align-items: center;
+}
+
 html{
     font-family: "Roboto";
     font-size: 16px;
@@ -44,9 +49,8 @@ header{
     }
 
     a{
-        display: flex;
+        @include flex-align;
         justify-content: center;
-        align-items: center;
         text-decoration: none;
     }
 }
@@ -84,12 +88,12 @@ section{
         h1{
             font-family: "Shrikhand";
             font-weight: 500;
+            letter-spacing: 0.5px;
             font-size: 1.8rem;
         }
 
         i{
-            display: flex;
-            align-items: center;
+            @include flex-align;
             font-size: 1.5rem;
         }
     } 
@@ -164,8 +168,7 @@ footer{
             padding: 0;
 
             li{
-                display: flex;
-                align-items: center;
+                @include flex-align;
                 padding: 0.25rem 0;
 
                 i{
