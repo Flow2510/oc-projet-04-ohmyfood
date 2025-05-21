@@ -10,17 +10,43 @@ $gradient: linear-gradient( to top, $first-color -11.44%, $second_color 123.93%)
 }
 
 @mixin button{
-    padding: 1rem;
+    padding: 1rem 0;
+    width: 220px;
     border: none;
     border-radius: 9999px;
     color: white;
     font-size: 1rem;
+    font-weight: 500;
     background: $gradient;
 }
 
 @mixin flex-align{
     display: flex;
     align-items: center;
+}
+
+@keyframes text-slide{
+    0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(2px, 2px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+button:hover{
+    opacity: 0.8; 
+}
+
+.button_span {
+  display: inline-block; /* indispensable pour que transform fonctionne */
+}
+
+button:hover .button_span {
+  animation: text-slide 0.2s ease;
 }
 
 html{
@@ -58,7 +84,7 @@ header{
 .img_intro{
     width: 100%;
     object-fit: cover;
-    aspect-ratio: 1;
+    height: 250px;
 }
 
 section{
@@ -72,12 +98,13 @@ section{
         padding-top: 1rem;
         
         button{
-        @include button;
-        width: 190px;
+            @include button;
+            margin: 1rem 0;
+            position: relative;
+            transition: opacity 0.3s ease-in-out;
+            
         }
-    }
-
-    
+    }    
 
     .section_title_container{
         display: grid;
