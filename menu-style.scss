@@ -9,6 +9,10 @@ $gradient: linear-gradient( to top, $first-color -11.44%, $second_color 123.93%)
     text-align: center;
 }
 
+@mixin shadow{
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
 @mixin button{
     padding: 1rem 0;
     width: 220px;
@@ -153,7 +157,8 @@ section{
             padding: 0.8rem;
             display: flex;
             justify-content: space-between;
-
+            @include shadow;
+            
             h3{
                 font-size: 1.1rem;
                 margin-bottom: 0.3rem;
