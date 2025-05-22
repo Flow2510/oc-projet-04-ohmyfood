@@ -1,0 +1,211 @@
+@charset "UTF-8";
+@keyframes text-slide {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(2px, 2px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+button:hover {
+  opacity: 0.8;
+}
+
+.button_span {
+  display: inline-block; /* indispensable pour que transform fonctionne */
+}
+
+button:hover .button_span {
+  animation: text-slide 0.2s ease;
+}
+
+html {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 300;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 80px auto 80px;
+}
+header img {
+  width: 180px;
+  margin: 1.5rem auto 1rem;
+}
+header a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.img_intro {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 250px;
+}
+
+.background_container {
+  background: hsl(0, 0%, 97%);
+  max-width: 1000px;
+  margin: auto;
+}
+
+section {
+  background: hsl(0, 0%, 97%);
+  transform: translatey(-3rem);
+  border-radius: 2rem 2rem 0 0;
+  padding: 1.5rem 0.5rem 0 0.5rem;
+}
+section .command_button_container {
+  text-align: center;
+  padding-top: 1rem;
+}
+section .command_button_container button {
+  padding: 1rem 0;
+  width: 220px;
+  border: none;
+  border-radius: 9999px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  background: linear-gradient(to top, #9356DC -11.44%, #FF79DA 123.93%);
+  margin: 1rem 0;
+  position: relative;
+  transition: opacity 0.3s ease-in-out;
+}
+section .section_title_container {
+  display: grid;
+  grid-template-columns: auto 50px;
+  border-radius: 2rem 2rem 0 0;
+}
+section .section_title_container h1 {
+  font-family: "Shrikhand";
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  font-size: 1.8rem;
+}
+section .section_title_container i {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+}
+section article {
+  margin: 1.5rem 0;
+}
+section article h2 {
+  font-weight: 300;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+section article .h2_underline {
+  height: 3px;
+  width: 40px;
+  background: #99E2D0;
+  margin-top: 0.3rem;
+}
+section article ul {
+  padding: 0;
+}
+section article li {
+  background: white;
+  border-radius: 0.7rem;
+  margin: 1rem 0;
+  list-style-type: none;
+  padding: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+section article li h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+section article li div {
+  flex: 1;
+  min-width: 0; /* Sans ça le texte ne se coupe pas */
+}
+section article li h3, section article li p {
+  white-space: nowrap; /* Empêche le retour à la ligne */
+  overflow: hidden; /* Cache ce qui déborde */
+  text-overflow: ellipsis; /* Affiche les "..." */
+}
+section article li p {
+  font-size: 0.95rem;
+}
+section article li strong {
+  display: flex;
+  flex-direction: column-reverse;
+}
+@media screen and (min-width: 750px) {
+  section {
+    max-width: 1000px;
+    margin: auto;
+  }
+  section .section_title_container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  section article {
+    max-width: 600px;
+    margin: 2rem auto;
+  }
+}
+
+footer {
+  background-color: #383838;
+  padding: 1.5rem;
+  font-weight: 400;
+}
+footer nav {
+  margin-top: 0.5rem;
+}
+footer nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+footer nav ul li {
+  display: flex;
+  align-items: center;
+  padding: 0.25rem 0;
+}
+footer nav ul li i {
+  width: 20px;
+  font-size: 0.7rem;
+}
+footer nav ul a {
+  color: white;
+  text-decoration: none;
+}
+footer img {
+  filter: brightness(100);
+  width: 100px;
+}
+@media screen and (min-width: 750px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    gap: 1rem;
+    padding: 4rem 1.5rem 1.5rem 1.5rem;
+  }
+  footer nav ul {
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+  }
+  footer nav ul li {
+    padding: 0;
+  }
+}/*# sourceMappingURL=menu-style.css.map */
