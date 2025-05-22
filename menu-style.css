@@ -122,10 +122,23 @@ section article li {
   border-radius: 0.7rem;
   margin: 1rem 0;
   list-style-type: none;
-  padding: 0.8rem;
   display: flex;
   justify-content: space-between;
   box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+section article li span {
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s ease-in-out;
+}
+section article li span i {
+  align-self: center;
+  color: white;
+  font-size: 1.4rem;
+  background-color: #99E2D0;
+  display: none;
+  padding: 1.5rem 1rem;
+  border-radius: 0 0.7rem 0.7rem 0;
 }
 section article li h3 {
   font-size: 1.1rem;
@@ -134,11 +147,12 @@ section article li h3 {
 section article li div {
   flex: 1;
   min-width: 0; /* Sans ça le texte ne se coupe pas */
+  padding: 0.8rem;
 }
 section article li h3, section article li p {
   white-space: nowrap; /* Empêche le retour à la ligne */
-  overflow: hidden; /* Cache ce qui déborde */
-  text-overflow: ellipsis; /* Affiche les "..." */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 section article li p {
   font-size: 0.95rem;
@@ -146,6 +160,10 @@ section article li p {
 section article li strong {
   display: flex;
   flex-direction: column-reverse;
+  padding: 0 1rem 0.8rem 0;
+}
+section article li:hover span {
+  width: 54px;
 }
 @media screen and (min-width: 750px) {
   section {

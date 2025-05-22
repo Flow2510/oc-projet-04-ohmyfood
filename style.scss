@@ -102,6 +102,10 @@ header {
         input::placeholder{
         color: black;
         }
+
+        @media screen and (min-width:750px) {
+        box-shadow: none;
+        }
     }
 }
 
@@ -126,6 +130,10 @@ header {
         position: relative;
         transition: opacity 0.3s ease-in-out;
         }
+
+    @media screen and (min-width:750px) {
+        box-shadow: none;
+    }
 }
 
 button:hover{
@@ -201,6 +209,10 @@ button:hover .button_span {
         margin: 1rem 0;
         border-radius: 0.8rem;
         background: white;
+
+        img{
+            height: 250px;
+        }
         
         div{
             position: relative;
@@ -223,11 +235,25 @@ button:hover .button_span {
             display: flex;
             justify-content: space-between;
 
-            i{
+            .fa-regular{
                 font-size: 1.3rem;
-                font-weight: 200;
                 padding-right: 0.5rem;
+                position: relative;
+
+                .fa-solid{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    visibility: hidden;   
+                    color: $first-color;                 
+                }
             }
+            
+            .fa-regular:hover .fa-solid{
+                visibility: visible;
+            }
+
+            
         }
 
         img{

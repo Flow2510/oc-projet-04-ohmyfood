@@ -67,6 +67,11 @@ header .header_search input::-moz-placeholder {
 header .header_search input::placeholder {
   color: black;
 }
+@media screen and (min-width: 750px) {
+  header .header_search {
+    box-shadow: none;
+  }
+}
 
 .intro_section {
   text-align: center;
@@ -94,6 +99,11 @@ header .header_search input::placeholder {
   margin: 1rem 0;
   position: relative;
   transition: opacity 0.3s ease-in-out;
+}
+@media screen and (min-width: 750px) {
+  .intro_section {
+    box-shadow: none;
+  }
 }
 
 button:hover {
@@ -165,6 +175,9 @@ button:hover .button_span {
   border-radius: 0.8rem;
   background: white;
 }
+.restaurants_section article img {
+  height: 250px;
+}
 .restaurants_section article div {
   position: relative;
 }
@@ -184,10 +197,20 @@ button:hover .button_span {
   display: flex;
   justify-content: space-between;
 }
-.restaurants_section article .article_content i {
+.restaurants_section article .article_content .fa-regular {
   font-size: 1.3rem;
-  font-weight: 200;
   padding-right: 0.5rem;
+  position: relative;
+}
+.restaurants_section article .article_content .fa-regular .fa-solid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  color: #9356DC;
+}
+.restaurants_section article .article_content .fa-regular:hover .fa-solid {
+  visibility: visible;
 }
 .restaurants_section article img {
   width: 100%;
