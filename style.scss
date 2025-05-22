@@ -76,6 +76,7 @@ header {
     @include text-center;
     
     
+    
     img {
         width: 170px;
         margin: 1.5rem auto 1rem;
@@ -87,6 +88,7 @@ header {
         background-color: $gray;
         padding: 0.8rem 1rem;
         gap: 0.5rem;
+        box-shadow: inset 0 0.7rem 0.7rem -1rem rgba(0, 0, 0, 0.5);
 
         input{
             border: none;
@@ -106,6 +108,7 @@ header {
 .intro_section{
     @include text-center;
     background: $light-gray;
+    box-shadow: inset 0 1rem 1rem -1rem rgba(0, 0, 0, 0.6);
 
     h1{
         padding: 0 2.5rem;
