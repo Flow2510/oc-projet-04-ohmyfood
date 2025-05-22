@@ -151,6 +151,7 @@ button:hover .button_span {
             
 
             div{
+                @include flex-align;
                 background-color: $light-gray;
                 padding: 1.5rem;
                 width: 100%;
@@ -187,7 +188,7 @@ button:hover .button_span {
 
         ol{
             display: grid;
-            grid-template-columns: auto auto auto;
+            grid-template-columns: 1fr 1fr 1fr;
             width: 100%;
         }
     }
@@ -231,7 +232,6 @@ button:hover .button_span {
 
         img{
             width: 100%;
-            aspect-ratio: 1/0.5;
             object-fit: cover;
             border-radius: 0.8rem 0.8rem 0 0;
         }
@@ -244,7 +244,7 @@ button:hover .button_span {
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: auto auto;
+            grid-template-columns: 1fr 1fr;
             row-gap: 2rem;
             column-gap: 5rem;
 
