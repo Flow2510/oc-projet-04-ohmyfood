@@ -48,14 +48,13 @@ html {
   text-decoration: none;
 }
 
-.img_intro {
+.main__image {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   height: 250px;
 }
-
-.background_container {
+.main__background-wrapper {
   background: hsl(0, 0%, 97%);
   max-width: 1000px;
   margin: auto;

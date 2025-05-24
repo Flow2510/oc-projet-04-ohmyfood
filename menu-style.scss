@@ -80,16 +80,18 @@ html{
     }
 }
 
-.img_intro{
-    width: 100%;
-    object-fit: cover;
-    height: 250px;
-}
+.main{
+    &__image{
+        width: 100%;
+        object-fit: cover;
+        height: 250px;
+    }
 
-.background_container{
-    background: $light-gray;
-    max-width: 1000px;
-    margin: auto;
+    &__background-wrapper{
+        background: $light-gray;
+        max-width: 1000px;
+        margin: auto;
+    }
 }
 
 section{
