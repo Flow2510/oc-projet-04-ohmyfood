@@ -34,38 +34,40 @@
         </div>
     </header>
     <main>
-        <section class="intro_section">
-            <h1>Réservez le menu qui vous convient</h1>
-            <p>Découvrez des restaurants d'exeption, sélectionnés par nos soins.</p>
-            <button><span class="button_span">Explorer nos restaurants</span></button>
+        <section class="intro">
+            <h1 class="intro__title">Réservez le menu qui vous convient</h1>
+            <p class="intro__text">Découvrez des restaurants d'exeption, sélectionnés par nos soins.</p>
+            <button class="intro__button">
+                <span class="intro__button-span">Explorer nos restaurants</span>
+            </button>
         </section>
-        <section class="functioning_section">
-            <h2>Fonctionnement</h2>
-            <ol>
-                <li>
-                    <span>1</span>
-                    <div>
-                        <i class="fa-solid fa-mobile-screen-button" style="color: hsla(0, 0%, 50%, 1);"></i> <!--enlever le style des icones du html-->
-                        <strong>Choisissez un restaurant</strong>
+        <section class="functioning">
+            <h2 class="functioning__title">Fonctionnement</h2>
+            <ol class="functioning__list">
+                <li class="functioning__item">
+                    <span class="functioning__step-number">1</span>
+                    <div class="functioning__step">
+                        <i class="functioning__icon fa-solid fa-mobile-screen-button" style="color: hsla(0, 0%, 50%, 1);"></i> <!--enlever le style des icones du html-->
+                        <strong class="functioning__text">Choisissez un restaurant</strong>
                     </div>
                 </li>
-                <li>
-                    <span>2</span>
-                    <div>
-                        <i class="fa-solid fa-list-ul" style="color: hsla(0, 0%, 50%, 1);"></i>
-                        <strong>Composez votre menu</strong>
+                <li class="functioning__item">
+                    <span class="functioning__step-number">2</span>
+                    <div class="functioning__step">
+                        <i class="functioning__icon fa-solid fa-list-ul" style="color: hsla(0, 0%, 50%, 1);"></i>
+                        <strong class="functioning__text">Composez votre menu</strong>
                     </div>
                 </li>
-                <li>
-                    <span>3</span>
-                    <div>
-                        <i class="fa-solid fa-store" style="color: hsla(267, 66%, 60%, 1);"></i>
-                        <strong>Dégustez au restaurant</strong>
+                <li class="functioning__item">
+                    <span class="functioning__step-number">3</span>
+                    <div class="functioning__step">
+                        <i class="functioning__icon fa-solid fa-store" style="color: hsla(267, 66%, 60%, 1);"></i>
+                        <strong class="functioning__text">Dégustez au restaurant</strong>
                     </div>
                 </li>
             </ol>
         </section>
-        <section class="restaurants_section">
+        <section class="restaurants">
             <div class="grid_container">
                 <h2>Restaurants</h2>
                 <a href="menu_la_palette_du_gout.html">
@@ -129,14 +131,14 @@
             </div>
         </section>
     </main>
-    <footer>
-        <img src="Images_et_textes_Ohmyfood/images/logo/ohmyfood.png" alt="Ohmyfood Logo">
-        <nav>
-            <ul>
-                <li><i class="fa-solid fa-utensils" style="color: #ffffff;"></i><a href="#">Proposer un restaurant</a></li> 
-                <li><i class="fa-solid fa-handshake-angle" style="color: #ffffff;"></i><a href="#">Devenir partenaire</a></li>
-                <li><a href="#">Mentions légales</a></li>
-                <li><a href="#">Contact</a></li>
+    <footer class="footer">
+        <img class="footer__logo" src="Images_et_textes_Ohmyfood/images/logo/ohmyfood.png" alt="Ohmyfood Logo">
+        <nav class="footer__nav">
+            <ul class="footer__list">
+                <li class="footer__item"><i class="footer__icon fa-solid fa-utensils" style="color: #ffffff;"></i><a class="footer__link" href="#">Proposer un restaurant</a></li> 
+                <li class="footer__item"><i class="footer__icon fa-solid fa-handshake-angle" style="color: #ffffff;"></i><a class="footer__link" href="#">Devenir partenaire</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Mentions légales</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Contact</a></li>
             </ul>
         </nav>
     </footer>

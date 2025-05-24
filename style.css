@@ -156,20 +156,20 @@ h3 {
   }
 }
 
-.intro_section {
+.intro {
   text-align: center;
   background: hsl(0, 0%, 97%);
   box-shadow: inset 0 1rem 1rem -1rem rgba(0, 0, 0, 0.6);
 }
-.intro_section h1 {
+.intro__title {
   padding: 0 2.5rem;
   font-size: 1.5rem;
 }
-.intro_section p {
+.intro__text {
   margin: 1rem 0;
   padding: 0 1rem;
 }
-.intro_section button {
+.intro__button {
   padding: 1rem 0;
   width: 220px;
   border: none;
@@ -183,34 +183,31 @@ h3 {
   position: relative;
   transition: opacity 0.3s ease-in-out;
 }
+.intro__button-span {
+  display: inline-block; /* indispensable pour que transform fonctionne */
+}
 @media screen and (min-width: 750px) {
-  .intro_section {
+  .intro {
     box-shadow: none;
   }
 }
-
-button:hover {
+.intro :hover {
   opacity: 0.8;
 }
-
-.button_span {
-  display: inline-block; /* indispensable pour que transform fonctionne */
-}
-
-button:hover .button_span {
+.intro :hover .intro__button-span {
   animation: text-slide 0.2s ease;
 }
 
-.functioning_section ol {
+.functioning__list {
   padding: 0;
 }
-.functioning_section ol li {
+.functioning__item {
   display: flex;
   align-items: center;
   list-style-type: none;
   margin: 1rem 0;
 }
-.functioning_section ol li div {
+.functioning__step {
   display: flex;
   align-items: center;
   background-color: hsl(0, 0%, 97%);
@@ -219,11 +216,11 @@ button:hover .button_span {
   border-radius: 1.5rem;
   box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
 }
-.functioning_section ol li div i {
+.functioning__icon {
   width: 40px;
   padding-left: 0.5rem;
 }
-.functioning_section ol li span {
+.functioning__step-number {
   background: #9356DC;
   color: white;
   height: 25px;
@@ -236,35 +233,35 @@ button:hover .button_span {
   transform: translateX(12.5px);
 }
 @media screen and (min-width: 750px) {
-  .functioning_section {
+  .functioning {
     max-width: 1200px;
     margin: 0 auto;
   }
-  .functioning_section h2 {
+  .functioning__title {
     padding-left: 1rem;
   }
-  .functioning_section ol {
+  .functioning__list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
   }
 }
 
-.restaurants_section {
+.restaurants {
   background: hsl(0, 0%, 97%);
 }
-.restaurants_section article {
+.restaurants article {
   margin: 1rem 0;
   border-radius: 0.8rem;
   background: white;
 }
-.restaurants_section article img {
+.restaurants article img {
   height: 250px;
 }
-.restaurants_section article div {
+.restaurants article div {
   position: relative;
 }
-.restaurants_section article div span {
+.restaurants article div span {
   position: absolute;
   top: 0.7rem;
   right: 0.7rem;
@@ -275,37 +272,37 @@ button:hover .button_span {
   font-weight: 500;
   border-radius: 0.2rem;
 }
-.restaurants_section article .article_content {
+.restaurants article .article_content {
   padding: 0.8rem;
   display: flex;
   justify-content: space-between;
 }
-.restaurants_section article .article_content .fa-regular {
+.restaurants article .article_content .fa-regular {
   font-size: 1.3rem;
   padding-right: 0.5rem;
   position: relative;
 }
-.restaurants_section article .article_content .fa-regular .fa-solid {
+.restaurants article .article_content .fa-regular .fa-solid {
   position: absolute;
   top: 0;
   left: 0;
   visibility: hidden;
   color: #9356DC;
 }
-.restaurants_section article .article_content .fa-regular:hover .fa-solid {
+.restaurants article .article_content .fa-regular:hover .fa-solid {
   visibility: visible;
 }
-.restaurants_section article img {
+.restaurants article img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 0.8rem 0.8rem 0 0;
 }
 @media screen and (min-width: 750px) {
-  .restaurants_section {
+  .restaurants {
     padding: 2rem;
   }
-  .restaurants_section .grid_container {
+  .restaurants .grid_container {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
@@ -314,57 +311,57 @@ button:hover .button_span {
     -moz-column-gap: 5rem;
          column-gap: 5rem;
   }
-  .restaurants_section .grid_container h2 {
+  .restaurants .grid_container h2 {
     grid-column: 1/span 2;
   }
-  .restaurants_section .grid_container article img {
+  .restaurants .grid_container article img {
     height: 300px;
   }
 }
 
-footer {
+.footer {
   background-color: #383838;
   padding: 1.5rem;
   font-weight: 400;
 }
-footer nav {
+.footer__logo {
+  filter: brightness(100);
+  width: 100px;
+}
+.footer__nav {
   margin-top: 0.5rem;
 }
-footer nav ul {
+.footer__list {
   list-style-type: none;
   padding: 0;
 }
-footer nav ul li {
+.footer__item {
   display: flex;
   align-items: center;
   padding: 0.25rem 0;
 }
-footer nav ul li i {
+.footer__icon {
   width: 20px;
   font-size: 0.7rem;
 }
-footer nav ul a {
+.footer__link {
   color: white;
   text-decoration: none;
 }
-footer img {
-  filter: brightness(100);
-  width: 100px;
-}
 @media screen and (min-width: 750px) {
-  footer {
+  .footer {
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-end;
     gap: 1rem;
     padding: 4rem 1.5rem 1.5rem 1.5rem;
   }
-  footer nav ul {
+  .footer__list {
     padding: 0;
     display: flex;
     gap: 1rem;
   }
-  footer nav ul li {
+  .footer__item {
     padding: 0;
   }
 }/*# sourceMappingURL=style.css.map */
