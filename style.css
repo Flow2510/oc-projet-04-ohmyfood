@@ -184,7 +184,7 @@ h3 {
   transition: opacity 0.3s ease-in-out;
 }
 .intro__button-span {
-  display: inline-block; /* indispensable pour que transform fonctionne */
+  display: inline-block; /* le transform ne fonctionne pas sans */
 }
 @media screen and (min-width: 750px) {
   .intro {
@@ -250,18 +250,22 @@ h3 {
 .restaurants {
   background: hsl(0, 0%, 97%);
 }
-.restaurants article {
+.restaurants__item {
   margin: 1rem 0;
   border-radius: 0.8rem;
   background: white;
 }
-.restaurants article img {
+.restaurants__image {
   height: 250px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.8rem 0.8rem 0 0;
 }
-.restaurants article div {
+.restaurants__image-wrapper {
   position: relative;
 }
-.restaurants article div span {
+.restaurants__sign {
   position: absolute;
   top: 0.7rem;
   right: 0.7rem;
@@ -272,37 +276,16 @@ h3 {
   font-weight: 500;
   border-radius: 0.2rem;
 }
-.restaurants article .article_content {
+.restaurants__content {
   padding: 0.8rem;
   display: flex;
   justify-content: space-between;
-}
-.restaurants article .article_content .fa-regular {
-  font-size: 1.3rem;
-  padding-right: 0.5rem;
-  position: relative;
-}
-.restaurants article .article_content .fa-regular .fa-solid {
-  position: absolute;
-  top: 0;
-  left: 0;
-  visibility: hidden;
-  color: #9356DC;
-}
-.restaurants article .article_content .fa-regular:hover .fa-solid {
-  visibility: visible;
-}
-.restaurants article img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 0.8rem 0.8rem 0 0;
 }
 @media screen and (min-width: 750px) {
   .restaurants {
     padding: 2rem;
   }
-  .restaurants .grid_container {
+  .restaurants__grid {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
@@ -311,12 +294,29 @@ h3 {
     -moz-column-gap: 5rem;
          column-gap: 5rem;
   }
-  .restaurants .grid_container h2 {
+  .restaurants__title {
     grid-column: 1/span 2;
   }
-  .restaurants .grid_container article img {
+  .restaurants__image {
     height: 300px;
   }
+}
+
+.fa-regular {
+  font-size: 1.3rem;
+  padding-right: 0.5rem;
+  position: relative;
+}
+.fa-regular .fa-solid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  color: #9356DC;
+}
+
+.fa-regular:hover .fa-solid {
+  visibility: visible;
 }
 
 .footer {

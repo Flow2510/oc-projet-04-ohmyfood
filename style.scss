@@ -225,7 +225,7 @@ h3{
         transition: opacity 0.3s ease-in-out;
 
         &-span {
-            display: inline-block; /* indispensable pour que transform fonctionne */
+            display: inline-block; /* le transform ne fonctionne pas sans */
         }
     }
 
@@ -299,86 +299,79 @@ h3{
 .restaurants{
     background: $light-gray;
 
-    article{
+    &__item{
         margin: 1rem 0;
         border-radius: 0.8rem;
         background: white;
-
-        img{
+    }
+    
+    &__image{
             height: 250px;
-        }
-        
-        div{
-            position: relative;
-
-            span{
-                position: absolute;
-                top: 0.7rem;
-                right: 0.7rem;
-                background: $third_color;
-                color: darken($third_color, $amount: 40%);
-                font-size: 0.75rem;
-                padding: 0.3rem 0.8rem;
-                font-weight: 500;
-                border-radius: 0.2rem;
-            }
-        }
-
-        .article_content{
-            padding: 0.8rem;
-            display: flex;
-            justify-content: space-between;
-
-            .fa-regular{
-                font-size: 1.3rem;
-                padding-right: 0.5rem;
-                position: relative;
-
-                .fa-solid{
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    visibility: hidden;   
-                    color: $first-color;                 
-                }
-            }
-            
-            .fa-regular:hover .fa-solid{
-                visibility: visible;
-            }
-
-            
-        }
-
-        img{
             width: 100%;
             object-fit: cover;
             border-radius: 0.8rem 0.8rem 0 0;
+    }
+        
+    &__image-wrapper{
+        position: relative;
+    }    
+
+    &__sign{
+            position: absolute;
+            top: 0.7rem;
+            right: 0.7rem;
+            background: $third_color;
+            color: darken($third_color, $amount: 40%);
+            font-size: 0.75rem;
+            padding: 0.3rem 0.8rem;
+            font-weight: 500;
+            border-radius: 0.2rem;
         }
+
+    &__content{
+        padding: 0.8rem;
+        display: flex;
+        justify-content: space-between;            
     }
 
     @media screen and (min-width:750px) {
         padding: 2rem;
 
-        .grid_container{
+        &__grid{
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
             row-gap: 2rem;
             column-gap: 5rem;
+        }
 
-            h2{
+        &__title{
                 grid-column: 1 / span 2;
-            }
+        }
 
-            article{
-                img{
-                    height: 300px;
-                }
-            }
+        &__image{
+            height: 300px;
         }
     }
+}
+
+.fa-regular{
+    font-size: 1.3rem;
+    padding-right: 0.5rem;
+    position: relative;
+
+    .fa-solid{
+        position: absolute;
+        top: 0;
+        left: 0;
+        visibility: hidden;   
+        color: $first-color;                 
+    }
+}
+            
+.fa-regular:hover .fa-solid{
+    visibility: visible;
 }
 
 .footer{
