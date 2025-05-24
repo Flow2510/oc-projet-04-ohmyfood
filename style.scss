@@ -31,6 +31,26 @@ $gradient-hover: rgb(255, 255, 255);
     align-items: center;
 }
 
+@keyframes rotation {
+    0% {
+        transform: rotateX(0deg);
+    }
+
+    100% {
+        transform: rotatez(1080deg);
+    }
+}
+
+@keyframes loader-off{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
 @keyframes text-slide{
     0% {
     transform: translate(0, 0);
@@ -70,6 +90,26 @@ h2{
 h3{
     font-size: 1rem;
     padding-bottom: 0.2rem
+}
+
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    z-index: 999;
+    @include flex-align;
+    justify-content: center;
+    animation: loader-off 0.1s forwards;
+    animation-delay: 3s;
+
+    img{
+        width: 120px;
+        animation: rotation 1s ease-in-out;
+        animation-iteration-count: 3;
+    }
 }
 
 header {
