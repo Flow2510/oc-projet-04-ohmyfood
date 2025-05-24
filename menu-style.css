@@ -33,15 +33,15 @@ html {
   box-sizing: border-box;
 }
 
-header {
+.header {
   display: grid;
   grid-template-columns: 80px auto 80px;
 }
-header img {
+.header__logo {
   width: 180px;
   margin: 1.5rem auto 1rem;
 }
-header a {
+.header__link {
   display: flex;
   align-items: center;
   justify-content: center;

@@ -11,31 +11,30 @@
     <title>Menu - La palette du goût</title>
 </head>
 <body>
-    <header>
-            <a href="index.html"><i class="fa-solid fa-arrow-left" style="color: #000000;"></i></a>
-            <img src="Images_et_textes_Ohmyfood/images/logo/ohmyfood.png" alt="Ohmyfood Logo">
+    <header class="header">
+            <a class="header__link" href="index.html"><i class="fa-solid fa-arrow-left" style="color: #000000;"></i></a>
+            <img class="header__logo" src="Images_et_textes_Ohmyfood/images/logo/ohmyfood.png" alt="Ohmyfood Logo">
     </header>
-    <main>
-        <img class="img_intro" src="Images_et_textes_Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
-        <div class="background_container">
-            <section>
-            <div class="section_container_transform">
-                <div class="section_title_container">
-                    <h1>La palette du goût</h1>
-                    <i class="fa-regular fa-heart" style="color: #000000;"></i>
+    <main class="main">
+        <img class="main__image" src="Images_et_textes_Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+        <div class="main__background-wrapper">
+            <section class="section">
+                <div class="section__title-wrapper">
+                    <h1 class="section__title">La palette du goût</h1>
+                    <i class="section__title-icon fa-regular fa-heart" style="color: #000000;"></i>
                 </div>
-                <article>
-                    <h2>Entrées</h2>
-                    <div class="h2_underline"></div>
-                        <ul>
-                            <li>
-                                <div>
-                                    <h3>Fricassée d'escargots</h3>
-                                    <p>Au piment d'Espelette</p>
+                <article class="restaurant">
+                    <h2 class="restaurant__title">Entrées</h2>
+                    <div class="restaurant__title-underline"></div>
+                        <ul class="restaurant__list">
+                            <li class="restaurant__item">
+                                <div class="restaurant__content">
+                                    <h3 class="restaurant__content-title">Fricassée d'escargots</h3>
+                                    <p class="restaurant__content-text">Au piment d'Espelette</p>
                                 </div>
-                                <strong>25€</strong>
-                                <span>
-                                    <i class="fa-solid fa-circle-check"></i>
+                                <strong class="restaurant__price">25€</strong>
+                                <span class="restaurant__check">
+                                    <i class="restaurant__check-icon fa-solid fa-circle-check"></i>
                                 </span>
                             </li>
                             <li>
@@ -135,18 +134,17 @@
                 <div class="command_button_container">
                     <button><span class="button_span">Commander</span></button>
                 </div>
-            </div>
-        </section>
+            </section>
         </div>
     </main>
-    <footer>
-        <img src="Images_et_textes_Ohmyfood/images/logo/ohmyfood.png" alt="Ohmyfood Logo">
-        <nav>
-            <ul>
-                <li><i class="fa-solid fa-utensils" style="color: #ffffff;"></i><a href="#">Proposer un restaurant</a></li> 
-                <li><i class="fa-solid fa-handshake-angle" style="color: #ffffff;"></i><a href="#">Devenir partenaire</a></li>
-                <li><a href="#">Mentions légales</a></li>
-                <li><a href="#">Contact</a></li>
+    <footer class="footer">
+        <img class="footer__logo" src="Images_et_textes_Ohmyfood/images/logo/ohmyfood.png" alt="Ohmyfood Logo">
+        <nav class="footer__nav">
+            <ul class="footer__list">
+                <li class="footer__item"><i class="footer__icon fa-solid fa-utensils" style="color: #ffffff;"></i><a class="footer__link" href="#">Proposer un restaurant</a></li> 
+                <li class="footer__item"><i class="footer__icon fa-solid fa-handshake-angle" style="color: #ffffff;"></i><a class="footer__link" href="#">Devenir partenaire</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Mentions légales</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Contact</a></li>
             </ul>
         </nav>
     </footer>
