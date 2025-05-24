@@ -26,6 +26,17 @@
     transform: translate(0, 0);
   }
 }
+@keyframes bounce {
+  0% {
+    transform: translatey(0);
+  }
+  50% {
+    transform: translatey(-2rem);
+  }
+  100% {
+    transform: translatey(0);
+  }
+}
 html {
   font-family: "Roboto";
   font-size: 16px;
@@ -54,7 +65,7 @@ h3 {
   padding-bottom: 0.2rem;
 }
 
-.loader {
+.loader_container {
   position: fixed;
   top: 0;
   left: 0;
@@ -64,14 +75,49 @@ h3 {
   z-index: 999;
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
+  gap: 10rem;
   animation: loader-off 0.1s forwards;
   animation-delay: 3s;
 }
-.loader img {
+.loader_container .loader1 img {
   width: 120px;
   animation: rotation 1s ease-in-out;
   animation-iteration-count: 3;
+}
+.loader_container .loader2 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 80%;
+  max-width: 500px;
+}
+.loader_container .loader2 img {
+  width: 100%;
+}
+.loader_container .loader2 .icon1 {
+  animation: bounce 1.5s ease-in-out;
+  animation-iteration-count: infinite;
+}
+.loader_container .loader2 .icon2 {
+  animation: bounce 1.5s ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 0.3s;
+}
+.loader_container .loader2 .icon3 {
+  animation: bounce 1.5s ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 0.6s;
+}
+.loader_container .loader2 .icon4 {
+  animation: bounce 1.5s ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 0.9s;
+}
+.loader_container .loader2 .icon5 {
+  animation: bounce 1.5s ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 1.2s;
 }
 
 header {
