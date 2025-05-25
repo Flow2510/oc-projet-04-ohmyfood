@@ -60,17 +60,23 @@ html {
   margin: auto;
 }
 
-section {
+.section {
   background: hsl(0, 0%, 97%);
   transform: translatey(-3rem);
   border-radius: 2rem 2rem 0 0;
   padding: 1.5rem 0.5rem 0 0.5rem;
 }
-section .command_button_container {
+@media screen and (min-width: 750px) {
+  .section {
+    max-width: 1000px;
+    margin: auto;
+  }
+}
+.section .command_button_container {
   text-align: center;
   padding-top: 1rem;
 }
-section .command_button_container button {
+.section .command_button_container button {
   padding: 1rem 0;
   width: 220px;
   border: none;
@@ -83,40 +89,58 @@ section .command_button_container button {
   position: relative;
   transition: opacity 0.3s ease-in-out;
 }
-section .section_title_container {
+.section__title-wrapper {
   display: grid;
   grid-template-columns: auto 50px;
   border-radius: 2rem 2rem 0 0;
+  align-items: center;
 }
-section .section_title_container h1 {
+@media screen and (min-width: 750px) {
+  .section__title-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+.section__title {
   font-family: "Shrikhand";
   font-weight: 500;
   letter-spacing: 0.5px;
   font-size: 1.8rem;
 }
-section .section_title_container i {
-  display: flex;
-  align-items: center;
+.section__title-icon {
   font-size: 1.5rem;
+  color: rgb(0, 0, 0);
 }
-section article {
+
+.section__title-icon:hover {
+  color: #9356DC;
+}
+
+.article {
   margin: 1.5rem 0;
 }
-section article h2 {
+@media screen and (min-width: 750px) {
+  .article {
+    max-width: 600px;
+    margin: 2rem auto;
+  }
+}
+.article__title {
   font-weight: 300;
   font-size: 1rem;
   text-transform: uppercase;
 }
-section article .h2_underline {
+.article__title-underline {
   height: 3px;
   width: 40px;
   background: #99E2D0;
   margin-top: 0.3rem;
 }
-section article ul {
+.article__list {
   padding: 0;
 }
-section article li {
+.article__item {
   background: white;
   border-radius: 0.7rem;
   margin: 1rem 0;
@@ -125,12 +149,12 @@ section article li {
   justify-content: space-between;
   box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
 }
-section article li span {
+.article__span {
   width: 0;
   overflow: hidden;
   transition: width 0.3s ease-in-out;
 }
-section article li span i {
+.article__span-icon {
   align-self: center;
   color: white;
   font-size: 1.4rem;
@@ -139,90 +163,81 @@ section article li span i {
   padding: 1.5rem 1rem;
   border-radius: 0 0.7rem 0.7rem 0;
 }
-section article li h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.3rem;
-}
-section article li div {
+.article__content-wrapper {
   flex: 1;
   min-width: 0; /* Sans ça le texte ne se coupe pas */
   padding: 0.8rem;
 }
-section article li h3, section article li p {
+.article__content-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+.article__content-text {
+  font-size: 0.95rem;
+}
+.article__content-title, .article__content-text {
   white-space: nowrap; /* Empêche le retour à la ligne */
   overflow: hidden;
   text-overflow: ellipsis;
 }
-section article li p {
-  font-size: 0.95rem;
-}
-section article li strong {
+.article__price {
   display: flex;
   flex-direction: column-reverse;
   padding: 0 1rem 0.8rem 0;
 }
-section article li:hover span {
+
+.article__item:hover .article__span {
   width: 54px;
 }
-@media screen and (min-width: 750px) {
-  section {
-    max-width: 1000px;
-    margin: auto;
-  }
-  section .section_title_container {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-  }
-  section article {
-    max-width: 600px;
-    margin: 2rem auto;
-  }
-}
 
-footer {
+.footer {
   background-color: #383838;
   padding: 1.5rem;
   font-weight: 400;
 }
-footer nav {
+.footer__logo {
+  filter: brightness(100);
+  width: 100px;
+}
+.footer__nav {
   margin-top: 0.5rem;
 }
-footer nav ul {
+.footer__list {
   list-style-type: none;
   padding: 0;
 }
-footer nav ul li {
+@media screen and (min-width: 750px) {
+  .footer__list {
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+  }
+}
+.footer__item {
   display: flex;
   align-items: center;
   padding: 0.25rem 0;
 }
-footer nav ul li i {
+@media screen and (min-width: 750px) {
+  .footer__item {
+    padding: 0;
+  }
+}
+.footer__icon {
   width: 20px;
   font-size: 0.7rem;
+  color: #ffffff;
 }
-footer nav ul a {
+.footer__link {
   color: white;
   text-decoration: none;
 }
-footer img {
-  filter: brightness(100);
-  width: 100px;
-}
 @media screen and (min-width: 750px) {
-  footer {
+  .footer {
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-end;
     gap: 1rem;
     padding: 4rem 1.5rem 1.5rem 1.5rem;
-  }
-  footer nav ul {
-    padding: 0;
-    display: flex;
-    gap: 1rem;
-  }
-  footer nav ul li {
-    padding: 0;
   }
 }/*# sourceMappingURL=menu-style.css.map */
