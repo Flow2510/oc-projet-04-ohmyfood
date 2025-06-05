@@ -14,6 +14,10 @@ button:hover {
   opacity: 0.8;
 }
 
+button {
+  cursor: pointer;
+}
+
 .button_span {
   display: inline-block; /* indispensable pour que transform fonctionne */
 }

@@ -15,6 +15,14 @@
     visibility: hidden;
   }
 }
+@keyframes show-off {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
 @keyframes text-slide {
   0% {
     transform: translate(0, 0);
@@ -63,6 +71,10 @@ h2 {
 h3 {
   font-size: 1rem;
   padding-bottom: 0.2rem;
+}
+
+button {
+  cursor: pointer;
 }
 
 .loader_container {
