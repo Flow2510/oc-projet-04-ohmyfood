@@ -64,7 +64,7 @@
     transform: rotate(0);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(720deg);
   }
 }
 @keyframes fourchette {
@@ -235,10 +235,10 @@ button {
   animation: assiette 1.5s ease-in-out, rotate 1s 1.5s infinite;
 }
 .loader_container .loader3 .fourchette {
-  animation: fourchette 2s ease-in-out, little_bounce 1s ease 2s infinite;
+  animation: fourchette 2s ease-in-out, little_bounce 1s linear 2s infinite;
 }
 .loader_container .loader3 .couteau {
-  animation: couteau 2s ease-in-out, little_bounce 1s ease 2.2s infinite;
+  animation: couteau 2s ease-in-out, little_bounce 1s linear 2.2s infinite;
 }
 
 .header {

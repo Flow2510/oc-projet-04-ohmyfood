@@ -109,7 +109,7 @@ $gradient-hover: rgb(255, 255, 255);
         transform: rotate(0);
     }
     100%{
-        transform: rotate(360deg);
+        transform: rotate(720deg);
     }
 }
 
@@ -260,12 +260,12 @@ button{
 
         .fourchette{
             animation: fourchette 2s ease-in-out,
-                       little_bounce 1s ease 2s infinite;
+                       little_bounce 1s linear 2s infinite;
         }
 
         .couteau{
             animation: couteau 2s ease-in-out,
-                       little_bounce 1s ease 2.2s infinite;
+                       little_bounce 1s linear 2.2s infinite;
         }
     }
 }
