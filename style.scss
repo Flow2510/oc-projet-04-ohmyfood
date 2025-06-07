@@ -95,6 +95,60 @@ $gradient-hover: rgb(255, 255, 255);
     }
 }
 
+@keyframes assiette{
+    0%{
+        transform: translateY(-100rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fourchette{
+    0%{
+        transform: translateX(-100rem)
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes couteau{
+    0%{
+        transform: translateX(100rem)
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes little_bounce {
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(0.5rem);
+    }
+    50% {
+        transform: translateY(-0.5rem);
+    }
+    80% {
+        transform: translateY(0.5rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 html{
     font-family: "Roboto";
     font-size: 16px;
@@ -150,51 +204,12 @@ button{
         padding: 0.5rem;
         overflow: hidden;
         
-        div:nth-child(1){                       // peut etre faire une boucle pour eviter les repetitions
-            transform: translateY(-10rem);
-            animation: loader 5s ease-in-out;
-        }
-
-        div:nth-child(2){
-            transform: translateY(-10rem);
-            animation: loader 4.8s ease-in-out;
-            animation-delay: 0.2s;
-        }
-
-        div:nth-child(3){
-            transform: translateY(-10rem);
-            animation: loader 4.6s ease-in-out;
-            animation-delay: 0.4s;
-        }
-
-        div:nth-child(4){
-            transform: translateY(-10rem);
-            animation: loader 4.4s ease-in-out;
-            animation-delay: 0.6s;
-        }
-
-        div:nth-child(5){
-            transform: translateY(-10rem);
-            animation: loader 4.2s ease-in-out;
-            animation-delay: 0.8s;
-        }
-
-        div:nth-child(6){
-            transform: translateY(-10rem);
-            animation: loader 4s ease-in-out;
-            animation-delay: 1s;
-        }
-
-        div:nth-child(7){
-            transform: translateY(-10rem);
-            animation: loader 3.8s ease-in-out;
-            animation-delay: 1.2s;
-        }
-
-        div:nth-child(8){
-            transform: translateY(-10rem);
-            animation: loader 3.6s ease-in-out;
-            animation-delay: 1.4s;
+        @for $i from 1 through 8 {
+            div:nth-child(#{$i}) {
+                transform: translateY(-10rem);
+                animation: loader #{5 - ($i - 1) * 0.2}s ease-in-out;
+                animation-delay: #{($i - 1) * 0.2}s;
+            }
         }
     }
 
@@ -230,6 +245,27 @@ button{
         .icon5{
             @include bounce-animation;
             animation-delay: 1.2s;
+        }
+    }
+
+    .loader3{
+        img{
+            width: 70px;
+        }
+
+        .assiette{
+            animation: assiette 1.5s ease-in-out,
+                       rotate 1s 1.5s infinite;
+        }
+
+        .fourchette{
+            animation: fourchette 2s ease-in-out,
+                       little_bounce 1s ease 2s infinite;
+        }
+
+        .couteau{
+            animation: couteau 2s ease-in-out,
+                       little_bounce 1s ease 2.2s infinite;
         }
     }
 }
