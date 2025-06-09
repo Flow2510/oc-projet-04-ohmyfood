@@ -10,6 +10,16 @@
     transform: translate(0, 0);
   }
 }
+@keyframes show {
+  0% {
+    visibility: hidden;
+    transform: translateX(-100rem);
+  }
+  100% {
+    visibility: visible;
+    transform: translateX(0);
+  }
+}
 button:hover {
   opacity: 0.8;
 }
@@ -199,6 +209,18 @@ html {
   display: flex;
   flex-direction: column-reverse;
   padding: 0 1rem 0.8rem 0;
+}
+
+.entrees li {
+  animation: show 1s ease-in-out;
+}
+
+.plats li {
+  animation: show 1.5s ease-in-out;
+}
+
+.desserts li {
+  animation: show 2s ease-in-out;
 }
 
 .article__item:hover .article__span {

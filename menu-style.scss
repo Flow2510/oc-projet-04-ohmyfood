@@ -41,6 +41,17 @@ $gradient: linear-gradient( to top, $first-color -11.44%, $second_color 123.93%)
   }
 }
 
+@keyframes show{
+    0%{
+        visibility: hidden;
+        transform: translateX(-100rem);
+    }
+    100%{
+        visibility: visible;
+        transform: translateX(0);
+    }
+}
+
 button:hover{
     opacity: 0.8; 
 }
@@ -102,7 +113,7 @@ html{
     background: $light-gray;
     transform: translatey(-3rem);
     border-radius: 2rem 2rem 0 0;
-    padding: 1.5rem 0.5rem 0 0.5rem;
+    padding: 1.5rem 0.5rem 0 0.5rem;    
 
     @media screen and (min-width:750px) {
         max-width: 1000px;
@@ -164,7 +175,7 @@ html{
 }
 
 .article{
-     margin: 1.5rem 0;
+    margin: 1.5rem 0;
 
     @media screen and (min-width:750px) {
         max-width: 600px;
@@ -240,6 +251,18 @@ html{
         flex-direction: column-reverse;
         padding: 0 1rem 0.8rem 0;
     }
+}
+
+.entrees li{
+    animation: show 1s ease-in-out;
+}
+
+.plats li{
+    animation: show 1.5s ease-in-out;
+}
+
+.desserts li{
+    animation: show 2s ease-in-out;
 }
 
 .article__item:hover .article__span{
