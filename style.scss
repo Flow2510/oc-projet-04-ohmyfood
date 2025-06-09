@@ -131,24 +131,6 @@ $gradient-hover: rgb(255, 255, 255);
     }
 }
 
-@keyframes little_bounce {
-    0% {
-        transform: translateY(0);
-    }
-    20% {
-        transform: translateY(0.5rem);
-    }
-    50% {
-        transform: translateY(-0.5rem);
-    }
-    80% {
-        transform: translateY(0.5rem);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
 html{
     font-family: "Roboto";
     font-size: 16px;
@@ -194,7 +176,7 @@ button{
     flex-direction: column-reverse;
     justify-content: center;
     animation: loader-off 0.1s forwards;
-    animation-delay: 5s;
+    animation-delay: 3s;
 
     .loader1{                                                       
         display: flex;
@@ -206,7 +188,7 @@ button{
         @for $i from 1 through 8 {
             div:nth-child(#{$i}) {
                 transform: translateY(-10rem);
-                animation: loader #{5 - ($i - 1) * 0.2}s ease-in-out;
+                animation: loader #{3 - ($i - 1) * 0.2}s ease-in-out;
                 animation-delay: #{($i - 1) * 0.2}s;
             }
         }
@@ -258,13 +240,11 @@ button{
         }
 
         .fourchette{
-            animation: fourchette 2s ease-in-out,
-                       little_bounce 1s linear 2s infinite;
+            animation: fourchette 2s ease-in-out;
         }
 
         .couteau{
-            animation: couteau 2s ease-in-out,
-                       little_bounce 1s linear 2.2s infinite;
+            animation: couteau 2s ease-in-out;
         }
     }
 }
