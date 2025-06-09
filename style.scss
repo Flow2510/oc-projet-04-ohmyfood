@@ -191,9 +191,8 @@ button{
     background: white;
     z-index: 999;
     @include flex-align;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
-    gap: 10rem;
     animation: loader-off 0.1s forwards;
     animation-delay: 5s;
 
@@ -463,16 +462,19 @@ button{
     padding-right: 0.5rem;
     position: relative;
 
-    .fa-solid{
+    img{
         position: absolute;
         top: 0;
         left: 0;
-        visibility: hidden;   
-        color: $first-color;                 
+        visibility: hidden;
     }
 }
-            
-.fa-regular:hover .fa-solid{
+      
+.fa-regular:hover{
+    visibility: hidden;
+}
+
+.fa-regular:hover img{
     visibility: visible;
 }
 
