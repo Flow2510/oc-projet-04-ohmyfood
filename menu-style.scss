@@ -69,24 +69,6 @@ $gradient: linear-gradient( to top, $first-color -11.44%, $second_color 123.93%)
 
 /****** global *******/
 
-button{
-    cursor: pointer;
-    @include shadow;
-
-    &:hover{
-        opacity: 0.8; 
-        box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
-    }
-}
-
-.button_span{
-    display: inline-block; /* indispensable pour que transform fonctionne */
-}
-
-button:hover .button_span {
-    animation: text-slide 0.2s ease;
-}
-
 html{
     font-family: "Roboto";
     font-size: 16px;
@@ -153,6 +135,21 @@ html{
             margin: 1rem 0;
             position: relative;
             transition: opacity 0.3s ease-in-out;
+            cursor: pointer;
+            @include shadow;
+
+            &:hover{
+                opacity: 0.8; 
+                box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
+
+                & .button_span{
+                    animation: text-slide 0.2s ease;
+                }
+            }
+
+            // &:hover .button_span {
+            //     animation: text-slide 0.2s ease;
+            // }
         }
     }    
 
@@ -183,6 +180,7 @@ html{
 
         img{
             position: absolute;
+            cursor: pointer;
             top: 0;
             left: 0;
             opacity: 0;

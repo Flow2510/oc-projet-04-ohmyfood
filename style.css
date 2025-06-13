@@ -115,10 +115,6 @@ h3 {
   padding-bottom: 0.2rem;
 }
 
-button {
-  cursor: pointer;
-}
-
 /***** loader ******/
 .loader_container {
   position: fixed;
@@ -287,25 +283,27 @@ button {
   color: white;
   font-size: 1rem;
   font-weight: 500;
-  background: linear-gradient(to top, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(to top, hsl(267, 66%, 60%) -11.44%, hsl(317, 100%, 74%) 123.93%);
   box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
   margin: 1rem 0;
   position: relative;
   transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
 }
 .intro__button-span {
   display: inline-block; /* le transform ne fonctionne pas sans */
+}
+.intro__button:hover {
+  background: linear-gradient(to top, hsla(267, 66%, 60%, 0.8) -11.44%, hsla(317, 100%, 74%, 0.8) 123.93%);
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+.intro__button:hover .intro__button-span {
+  animation: text-slide 0.4s ease; /* j'arrive pas a animer la sortie de l'hover */
 }
 @media screen and (min-width: 750px) {
   .intro {
     box-shadow: none;
   }
-}
-.intro :hover {
-  opacity: 0.8;
-}
-.intro :hover .intro__button-span {
-  animation: text-slide 0.2s ease;
 }
 
 /****** functioning section *******/
@@ -413,7 +411,7 @@ button {
   visibility: hidden;
   transition: opacity 0.5s, visibility 0s linear 0.5s; /* le visibility pour pas disparaitre instant  */
 }
-.restaurants__icon:hover .restaurants__icon-image {
+.restaurants__icon:hover .restaurants__icon-image { /* j'arrive pas a faire en sorte qu'il stop le lien du container au clique sans JS */
   opacity: 1;
   visibility: visible;
   transition: opacity 0.5s, visibility 0s;

@@ -5,7 +5,7 @@ $second_color: #FF79DA;
 $third_color: #99E2D0;
 $gray: hsla(0, 0%, 92%, 1);
 $light-gray: hsla(0, 0%, 97%, 1);
-$gradient: linear-gradient( to top, #9356DC -11.44%, #FF79DA 123.93%);
+$gradient: linear-gradient( to top, hsla(267, 66%, 60%, 1) -11.44%, hsl(317, 100%, 74%, 1) 123.93%);
 $gradient-hover: rgb(255, 255, 255);
 
 /****** mixin *******/
@@ -168,10 +168,6 @@ h3{
     padding-bottom: 0.2rem
 }
 
-button{
-    cursor: pointer;
-}
-
 /***** loader ******/
 
 .loader_container{
@@ -318,22 +314,24 @@ button{
         margin: 1rem 0;
         position: relative;
         transition: opacity 0.3s ease-in-out;
+        cursor: pointer;
 
         &-span {
             display: inline-block; /* le transform ne fonctionne pas sans */
+        }
+
+        &:hover{
+            background: linear-gradient( to top, hsla(267, 66%, 60%, 0.8) -11.44%, hsl(317, 100%, 74%, 0.8) 123.93%);
+            box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.5)
+        }
+
+        &:hover &-span {
+            animation: text-slide 0.4s ease;   /* j'arrive pas a animer la sortie de l'hover */
         }
     }
 
     @media screen and (min-width:750px) {
         box-shadow: none;
-    }
-    
-    :hover{
-        opacity: 0.8; 
-    }
-
-    :hover .intro__button-span {
-        animation: text-slide 0.2s ease;
     }
 }
 
@@ -454,7 +452,7 @@ button{
             transition: opacity 0.5s, visibility 0s linear 0.5s;    /* le visibility pour pas disparaitre instant  */
         }
 
-        &:hover &-image{
+        &:hover &-image{     /* j'arrive pas a faire en sorte qu'il stop le lien du container au clique sans JS */
             opacity: 1;
             visibility: visible;
             transition: opacity 0.5s, visibility 0s;
