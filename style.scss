@@ -363,6 +363,13 @@ button{
     &__icon {
         width: 40px;
         padding-left: 0.5rem;
+        color: hsla(0, 0%, 50%, 1);
+
+        &-purple{
+            color: hsla(267, 66%, 60%, 1);
+            width: 40px;
+            padding-left: 0.5rem;
+        }
     }
 
     &__step-number {
@@ -507,6 +514,7 @@ button{
     &__icon{
         width: 20px;
         font-size: 0.7rem;
+        color: white;
     }
     
     &__link{

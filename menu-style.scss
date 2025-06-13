@@ -14,7 +14,7 @@ $gradient: linear-gradient( to top, $first-color -11.44%, $second_color 123.93%)
 }
 
 @mixin shadow{
-    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
 }
 
 @mixin button{
@@ -60,12 +60,14 @@ $gradient: linear-gradient( to top, $first-color -11.44%, $second_color 123.93%)
 
 /****** global *******/
 
-button:hover{
-    opacity: 0.8; 
-}
-
 button{
     cursor: pointer;
+    @include shadow;
+
+    &:hover{
+        opacity: 0.8; 
+        box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
+    }
 }
 
 .button_span{

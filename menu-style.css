@@ -24,12 +24,13 @@
   }
 }
 /****** global *******/
-button:hover {
-  opacity: 0.8;
-}
-
 button {
   cursor: pointer;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+button:hover {
+  opacity: 0.8;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
 }
 
 .button_span {
@@ -180,7 +181,7 @@ html {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
-  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
 }
 .article__span {
   width: 0;

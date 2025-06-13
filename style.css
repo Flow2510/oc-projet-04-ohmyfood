@@ -331,6 +331,12 @@ button {
 .functioning__icon {
   width: 40px;
   padding-left: 0.5rem;
+  color: hsl(0, 0%, 50%);
+}
+.functioning__icon-purple {
+  color: hsl(267, 66%, 60%);
+  width: 40px;
+  padding-left: 0.5rem;
 }
 .functioning__step-number {
   background: #9356DC;
@@ -461,6 +467,7 @@ button {
 .footer__icon {
   width: 20px;
   font-size: 0.7rem;
+  color: white;
 }
 .footer__link {
   color: white;
