@@ -58,6 +58,15 @@ $gradient: linear-gradient( to top, $first-color -11.44%, $second_color 123.93%)
     }
 }
 
+@keyframes opacity{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 /****** global *******/
 
 button{
@@ -118,6 +127,7 @@ html{
         @include flex-align;
         justify-content: center;
         text-decoration: none;
+        color: black;
     }
 }
 
@@ -166,7 +176,7 @@ html{
         font-size: 1.8rem;
     }
 
-    &__title-icon{
+    &__title-icon {
         font-size: 1.3rem;
         padding-right: 0.5rem;
         position: relative;
@@ -175,19 +185,17 @@ html{
             position: absolute;
             top: 0;
             left: 0;
+            opacity: 0;
             visibility: hidden;
+            transition: opacity 0.5s, visibility 0s linear 0.5s;    /* le visibility pour pas disparaitre instant  */
         }
-    } 
-}
 
-/**** icone favoris ****/
-
-.section__title-icon:hover{
-    visibility: hidden;
-}
-
-.section__title-icon:hover img{
-    visibility: visible;
+        &:hover img{
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.5s, visibility 0s;
+        }
+    }
 }
 
 /****** article (entrees, plats, desserts) *******/

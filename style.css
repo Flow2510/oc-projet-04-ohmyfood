@@ -400,6 +400,24 @@ button {
   display: flex;
   justify-content: space-between;
 }
+.restaurants__icon {
+  font-size: 1.3rem;
+  padding-right: 0.5rem;
+  position: relative;
+}
+.restaurants__icon-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0s linear 0.5s; /* le visibility pour pas disparaitre instant  */
+}
+.restaurants__icon:hover .restaurants__icon-image {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s, visibility 0s;
+}
 @media screen and (min-width: 750px) {
   .restaurants {
     padding: 2rem;
@@ -419,27 +437,6 @@ button {
   .restaurants__image {
     height: 300px;
   }
-}
-
-/***** icone favoris ******/
-.fa-regular {
-  font-size: 1.3rem;
-  padding-right: 0.5rem;
-  position: relative;
-}
-.fa-regular img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  visibility: hidden;
-}
-
-.fa-regular:hover {
-  visibility: hidden;
-}
-
-.fa-regular:hover img {
-  visibility: visible;
 }
 
 /****** footer ******/
