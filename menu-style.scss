@@ -125,33 +125,6 @@ html{
         max-width: 1000px;
         margin: auto;
     }
-    
-    .command_button_container{
-        @include text-center;
-        padding-top: 1rem;
-        
-        button{
-            @include button;
-            margin: 1rem 0;
-            position: relative;
-            transition: opacity 0.3s ease-in-out;
-            cursor: pointer;
-            @include shadow;
-
-            &:hover{
-                opacity: 0.8; 
-                box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
-
-                & .button_span{
-                    animation: text-slide 0.2s ease;
-                }
-            }
-
-            // &:hover .button_span {
-            //     animation: text-slide 0.2s ease;
-            // }
-        }
-    }    
 
     &__title-wrapper{
         display: grid;
@@ -195,6 +168,34 @@ html{
         }
     }
 }
+
+/***** bouton commande ******/
+
+.command__button-wrapper{
+    @include text-center;
+    padding-top: 1rem;
+        
+    .command__button{
+        @include button;
+        margin: 1rem 0;
+        position: relative;
+        cursor: pointer;
+        @include shadow;
+
+        &-span{
+            display: inline-block;       /* m'a fait galere, l'animation marche pas sans */
+        }
+
+        &:hover{ 
+            box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
+            background: linear-gradient( to top, hsla(267, 66%, 60%, 0.8) -11.44%, hsl(317, 100%, 74%, 0.8) 123.93%);
+        }
+
+        &:hover .command__button-span{
+            animation: text-slide 0.4s ease-in-out;
+        }
+    }
+}    
 
 /****** article (entrees, plats, desserts) *******/
 

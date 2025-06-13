@@ -85,32 +85,6 @@ html {
     margin: auto;
   }
 }
-.section .command_button_container {
-  text-align: center;
-  padding-top: 1rem;
-}
-.section .command_button_container button {
-  padding: 1rem 0;
-  width: 220px;
-  border: none;
-  border-radius: 9999px;
-  color: white;
-  font-size: 1rem;
-  font-weight: 500;
-  background: linear-gradient(to top, #9356DC -11.44%, #FF79DA 123.93%);
-  margin: 1rem 0;
-  position: relative;
-  transition: opacity 0.3s ease-in-out;
-  cursor: pointer;
-  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
-}
-.section .command_button_container button:hover {
-  opacity: 0.8;
-  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
-}
-.section .command_button_container button:hover .button_span {
-  animation: text-slide 0.2s ease;
-}
 .section__title-wrapper {
   display: grid;
   grid-template-columns: auto 50px;
@@ -148,6 +122,36 @@ html {
   opacity: 1;
   visibility: visible;
   transition: opacity 0.5s, visibility 0s;
+}
+
+/***** bouton commande ******/
+.command__button-wrapper {
+  text-align: center;
+  padding-top: 1rem;
+}
+.command__button-wrapper .command__button {
+  padding: 1rem 0;
+  width: 220px;
+  border: none;
+  border-radius: 9999px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  background: linear-gradient(to top, #9356DC -11.44%, #FF79DA 123.93%);
+  margin: 1rem 0;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+.command__button-wrapper .command__button-span {
+  display: inline-block; /* m'a fait galere, l'animation marche pas sans */
+}
+.command__button-wrapper .command__button:hover {
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to top, hsla(267, 66%, 60%, 0.8) -11.44%, hsla(317, 100%, 74%, 0.8) 123.93%);
+}
+.command__button-wrapper .command__button:hover .command__button-span {
+  animation: text-slide 0.4s ease-in-out;
 }
 
 /****** article (entrees, plats, desserts) *******/
