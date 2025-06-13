@@ -1,3 +1,5 @@
+/***** variables *****/
+
 $first-color: #9356DC;
 $second_color: #FF79DA;
 $third_color: #99E2D0;
@@ -5,6 +7,8 @@ $gray: hsla(0, 0%, 92%, 1);
 $light-gray: hsla(0, 0%, 97%, 1);
 $gradient: linear-gradient( to top, #9356DC -11.44%, #FF79DA 123.93%);
 $gradient-hover: rgb(255, 255, 255);
+
+/****** mixin *******/
 
 @mixin text-center{
     text-align: center;
@@ -35,6 +39,8 @@ $gradient-hover: rgb(255, 255, 255);
     animation: bounce 1.5s ease-in-out;
     animation-iteration-count: infinite;
 }
+
+/****** keyframes ******/
 
 @keyframes loader-off{
     0%{
@@ -131,6 +137,8 @@ $gradient-hover: rgb(255, 255, 255);
     }
 }
 
+/****** global *******/
+
 html{
     font-family: "Roboto";
     font-size: 16px;
@@ -163,6 +171,8 @@ h3{
 button{
     cursor: pointer;
 }
+
+/***** loader ******/
 
 .loader_container{
     position: fixed;
@@ -249,6 +259,8 @@ button{
     }
 }
 
+/****** header ******/
+
 .header {
     @include text-center;
     
@@ -283,6 +295,8 @@ button{
         }
     }
 }
+
+/**** intro section ****/
 
 .intro{
     @include text-center;
@@ -323,6 +337,7 @@ button{
     }
 }
 
+/****** functioning section *******/
 
 .functioning {
     &__list {
@@ -340,6 +355,7 @@ button{
         background-color: $light-gray;
         padding: 1.5rem;
         width: 100%;
+        height: 100%;
         border-radius: 1.5rem;
         @include shadow;
     }
@@ -376,6 +392,8 @@ button{
         }
     }
 }
+
+/******* restaurants section ********/
 
 .restaurants{
     background: $light-gray;
@@ -437,6 +455,8 @@ button{
     }
 }
 
+/***** icone favoris ******/
+
 .fa-regular{
     font-size: 1.3rem;
     padding-right: 0.5rem;
@@ -457,6 +477,8 @@ button{
 .fa-regular:hover img{
     visibility: visible;
 }
+
+/****** footer ******/
 
 .footer{
     background-color: darken($gray, $amount: 70%);
