@@ -192,9 +192,9 @@ h3{
         overflow: hidden;
         
         @for $i from 1 through 8 {
-            div:nth-child(#{$i}) {
+            div:nth-child(#{$i}) {             /* j'ai galerer a faire cette fonction, faire des exercices sur les fonctions scss */
                 transform: translateY(-10rem);
-                animation: loader #{3 - ($i - 1) * 0.2}s ease-in-out;
+                animation: loader #{3 - ($i - 1) * 0.2}s ease-in-out;  
                 animation-delay: #{($i - 1) * 0.2}s;
             }
         }
@@ -210,8 +210,8 @@ h3{
             width: 100%;
         }
         
-        .icon1{
-            @include bounce-animation;
+        .icon1{                                     /* essayer de refaire une fonction pour les delay */
+            @include bounce-animation;      
         }
 
         .icon2{

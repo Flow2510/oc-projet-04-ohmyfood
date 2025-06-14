@@ -138,42 +138,42 @@ h3 {
   padding: 0.5rem;
   overflow: hidden;
 }
-.loader_container .loader1 div:nth-child(1) {
+.loader_container .loader1 div:nth-child(1) { /* j'ai galerer a faire cette fonction, faire des exercices sur les fonctions scss */
   transform: translateY(-10rem);
   animation: loader 3s ease-in-out;
   animation-delay: 0s;
 }
-.loader_container .loader1 div:nth-child(2) {
+.loader_container .loader1 div:nth-child(2) { /* j'ai galerer a faire cette fonction, faire des exercices sur les fonctions scss */
   transform: translateY(-10rem);
   animation: loader 2.8s ease-in-out;
   animation-delay: 0.2s;
 }
-.loader_container .loader1 div:nth-child(3) {
+.loader_container .loader1 div:nth-child(3) { /* j'ai galerer a faire cette fonction, faire des exercices sur les fonctions scss */
   transform: translateY(-10rem);
   animation: loader 2.6s ease-in-out;
   animation-delay: 0.4s;
 }
-.loader_container .loader1 div:nth-child(4) {
+.loader_container .loader1 div:nth-child(4) { /* j'ai galerer a faire cette fonction, faire des exercices sur les fonctions scss */
   transform: translateY(-10rem);
   animation: loader 2.4s ease-in-out;
   animation-delay: 0.6s;
 }
-.loader_container .loader1 div:nth-child(5) {
+.loader_container .loader1 div:nth-child(5) { /* j'ai galerer a faire cette fonction, faire des exercices sur les fonctions scss */
   transform: translateY(-10rem);
   animation: loader 2.2s ease-in-out;
   animation-delay: 0.8s;
 }
-.loader_container .loader1 div:nth-child(6) {
+.loader_container .loader1 div:nth-child(6) { /* j'ai galerer a faire cette fonction, faire des exercices sur les fonctions scss */
   transform: translateY(-10rem);
   animation: loader 2s ease-in-out;
   animation-delay: 1s;
 }
-.loader_container .loader1 div:nth-child(7) {
+.loader_container .loader1 div:nth-child(7) { /* j'ai galerer a faire cette fonction, faire des exercices sur les fonctions scss */
   transform: translateY(-10rem);
   animation: loader 1.8s ease-in-out;
   animation-delay: 1.2s;
 }
-.loader_container .loader1 div:nth-child(8) {
+.loader_container .loader1 div:nth-child(8) { /* j'ai galerer a faire cette fonction, faire des exercices sur les fonctions scss */
   transform: translateY(-10rem);
   animation: loader 1.6s ease-in-out;
   animation-delay: 1.4s;
@@ -187,7 +187,7 @@ h3 {
 .loader_container .loader2 img {
   width: 100%;
 }
-.loader_container .loader2 .icon1 {
+.loader_container .loader2 .icon1 { /* essayer de refaire une fonction pour les delay */
   animation: bounce 1.5s ease-in-out;
   animation-iteration-count: infinite;
 }
