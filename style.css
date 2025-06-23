@@ -54,7 +54,7 @@
     transform: translateY(10rem);
   }
 }
-@keyframes assiette {
+@keyframes fadeInDown {
   0% {
     transform: translateY(-100rem);
   }
@@ -70,7 +70,7 @@
     transform: rotate(720deg);
   }
 }
-@keyframes fourchette {
+@keyframes fadeInLeft {
   0% {
     transform: translateX(-100rem);
   }
@@ -78,7 +78,7 @@
     transform: translateX(0);
   }
 }
-@keyframes couteau {
+@keyframes fadeInRight {
   0% {
     transform: translateX(100rem);
   }
@@ -116,7 +116,7 @@ h3 {
 }
 
 /***** loader ******/
-.loader_container {
+.loader {
   position: fixed;
   top: 0;
   left: 0;
@@ -131,97 +131,97 @@ h3 {
   animation: loader-off 0.1s forwards;
   animation-delay: 3s;
 }
-.loader_container .loader1 {
+.loader__wrapper-1 {
   display: flex;
   font-size: 3rem;
   font-family: "Shrikhand";
   padding: 0.5rem;
   overflow: hidden;
 }
-.loader_container .loader1 div:nth-child(1) { /* j'ai galerer a faire cette fonction, faire des exercices sur les fonctions scss */
+.loader__wrapper-1 div:nth-child(1) { /* j'ai galerer a faire cette fonction, faire des exercices sur les fonctions scss */
   transform: translateY(-10rem);
   animation: loader 3s ease-in-out;
   animation-delay: 0s;
 }
-.loader_container .loader1 div:nth-child(2) { /* j'ai galerer a faire cette fonction, faire des exercices sur les fonctions scss */
+.loader__wrapper-1 div:nth-child(2) { /* j'ai galerer a faire cette fonction, faire des exercices sur les fonctions scss */
   transform: translateY(-10rem);
   animation: loader 2.8s ease-in-out;
   animation-delay: 0.2s;
 }
-.loader_container .loader1 div:nth-child(3) { /* j'ai galerer a faire cette fonction, faire des exercices sur les fonctions scss */
+.loader__wrapper-1 div:nth-child(3) { /* j'ai galerer a faire cette fonction, faire des exercices sur les fonctions scss */
   transform: translateY(-10rem);
   animation: loader 2.6s ease-in-out;
   animation-delay: 0.4s;
 }
-.loader_container .loader1 div:nth-child(4) { /* j'ai galerer a faire cette fonction, faire des exercices sur les fonctions scss */
+.loader__wrapper-1 div:nth-child(4) { /* j'ai galerer a faire cette fonction, faire des exercices sur les fonctions scss */
   transform: translateY(-10rem);
   animation: loader 2.4s ease-in-out;
   animation-delay: 0.6s;
 }
-.loader_container .loader1 div:nth-child(5) { /* j'ai galerer a faire cette fonction, faire des exercices sur les fonctions scss */
+.loader__wrapper-1 div:nth-child(5) { /* j'ai galerer a faire cette fonction, faire des exercices sur les fonctions scss */
   transform: translateY(-10rem);
   animation: loader 2.2s ease-in-out;
   animation-delay: 0.8s;
 }
-.loader_container .loader1 div:nth-child(6) { /* j'ai galerer a faire cette fonction, faire des exercices sur les fonctions scss */
+.loader__wrapper-1 div:nth-child(6) { /* j'ai galerer a faire cette fonction, faire des exercices sur les fonctions scss */
   transform: translateY(-10rem);
   animation: loader 2s ease-in-out;
   animation-delay: 1s;
 }
-.loader_container .loader1 div:nth-child(7) { /* j'ai galerer a faire cette fonction, faire des exercices sur les fonctions scss */
+.loader__wrapper-1 div:nth-child(7) { /* j'ai galerer a faire cette fonction, faire des exercices sur les fonctions scss */
   transform: translateY(-10rem);
   animation: loader 1.8s ease-in-out;
   animation-delay: 1.2s;
 }
-.loader_container .loader1 div:nth-child(8) { /* j'ai galerer a faire cette fonction, faire des exercices sur les fonctions scss */
+.loader__wrapper-1 div:nth-child(8) { /* j'ai galerer a faire cette fonction, faire des exercices sur les fonctions scss */
   transform: translateY(-10rem);
   animation: loader 1.6s ease-in-out;
   animation-delay: 1.4s;
 }
-.loader_container .loader2 {
+.loader__wrapper-2 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   width: 80%;
   max-width: 500px;
 }
-.loader_container .loader2 img {
+.loader__wrapper-2 img {
   width: 100%;
 }
-.loader_container .loader2 .icon1 { /* essayer de refaire une fonction pour les delay */
+.loader__wrapper-2 .icon1 { /* essayer de refaire une fonction pour les delay */
   animation: bounce 1.5s ease-in-out;
   animation-iteration-count: infinite;
 }
-.loader_container .loader2 .icon2 {
+.loader__wrapper-2 .icon2 {
   animation: bounce 1.5s ease-in-out;
   animation-iteration-count: infinite;
   animation-delay: 0.3s;
 }
-.loader_container .loader2 .icon3 {
+.loader__wrapper-2 .icon3 {
   animation: bounce 1.5s ease-in-out;
   animation-iteration-count: infinite;
   animation-delay: 0.6s;
 }
-.loader_container .loader2 .icon4 {
+.loader__wrapper-2 .icon4 {
   animation: bounce 1.5s ease-in-out;
   animation-iteration-count: infinite;
   animation-delay: 0.9s;
 }
-.loader_container .loader2 .icon5 {
+.loader__wrapper-2 .icon5 {
   animation: bounce 1.5s ease-in-out;
   animation-iteration-count: infinite;
   animation-delay: 1.2s;
 }
-.loader_container .loader3 img {
+.loader__wrapper-3 img {
   width: 70px;
 }
-.loader_container .loader3 .assiette {
-  animation: assiette 1.5s ease-in-out, rotate 1s 1.5s infinite;
+.loader__wrapper-3 .fadeInDown {
+  animation: fadeInDown 1.5s ease-in-out, rotate 1s 1.5s infinite;
 }
-.loader_container .loader3 .fourchette {
-  animation: fourchette 2s ease-in-out;
+.loader__wrapper-3 .fadeInLeft {
+  animation: fadeInLeft 2s ease-in-out;
 }
-.loader_container .loader3 .couteau {
-  animation: couteau 2s ease-in-out;
+.loader__wrapper-3 .fadeInRight {
+  animation: fadeInRight 2s ease-in-out;
 }
 
 /****** header ******/
