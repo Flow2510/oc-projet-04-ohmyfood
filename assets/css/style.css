@@ -249,9 +249,6 @@ h3 {
   width: 150px;
   text-align: center;
 }
-.header__search-input::-moz-placeholder {
-  color: black;
-}
 .header__search-input::placeholder {
   color: black;
 }
@@ -375,8 +372,7 @@ h3 {
 .restaurants__image {
   height: 250px;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 0.8rem 0.8rem 0 0;
 }
 .restaurants__image-wrapper {
@@ -387,7 +383,7 @@ h3 {
   top: 0.7rem;
   right: 0.7rem;
   background: #99E2D0;
-  color: #278870;
+  color: rgb(38.7404580153, 136.2595419847, 112.213740458);
   font-size: 0.75rem;
   padding: 0.3rem 0.8rem;
   font-weight: 500;
@@ -426,8 +422,7 @@ h3 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 2rem;
-    -moz-column-gap: 5rem;
-         column-gap: 5rem;
+    column-gap: 5rem;
   }
   .restaurants__title {
     grid-column: 1/span 2;
@@ -439,7 +434,7 @@ h3 {
 
 /****** footer ******/
 .footer {
-  background-color: #383838;
+  background-color: hsl(0, 0%, 22%);
   padding: 1.5rem;
   font-weight: 400;
 }
@@ -484,4 +479,6 @@ h3 {
   .footer__item {
     padding: 0;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

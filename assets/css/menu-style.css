@@ -45,8 +45,7 @@ html {
 
 .main__image {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 250px;
 }
 .main__background-wrapper {
@@ -243,7 +242,7 @@ html {
 
 /****** footer ******/
 .footer {
-  background-color: #383838;
+  background-color: hsl(0, 0%, 22%);
   padding: 1.5rem;
   font-weight: 400;
 }
@@ -292,4 +291,6 @@ html {
     gap: 1rem;
     padding: 4rem 1.5rem 1.5rem 1.5rem;
   }
-}/*# sourceMappingURL=menu-style.css.map */
+}
+
+/*# sourceMappingURL=menu-style.css.map */
